@@ -23,7 +23,6 @@
 
     form.addEventListener('submit', function (event) {
       // if the form contains valid data, we let it submit
-
       if(!email.validity.valid) {
         // If it isn't, we display an appropriate error message
         showError();

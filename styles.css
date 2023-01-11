@@ -136,10 +136,6 @@ form {
     background-color: hsl(223, 100%, 73%);
 }
 
-input:invalid {
-    border-color: rgb(255, 82, 99);
-}
-
 input:focus:invalid {
     outline: none;
     border-color: rgb(255, 82, 99);
