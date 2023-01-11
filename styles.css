@@ -96,7 +96,7 @@ body {
 
 em {
     font-style: normal;
-    color: black;
+    color: hsl(209, 33%, 12%);
     font-weight: 700;
 }
 
@@ -132,6 +132,10 @@ form {
     font-size: 1.2rem;
 }
 
+.form__button:hover{
+    background-color: hsl(223, 100%, 73%);
+}
+
 input:invalid {
     border-color: rgb(255, 82, 99);
 }
@@ -156,7 +160,7 @@ input::placeholder,
 }
 
 .error {
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-radius: 0px 0px 5px 5px;
     color: rgb(255, 82, 137);
     box-sizing: border-box;
