@@ -1,10 +1,9 @@
 *,
-*::before,
-*::after {
+::before,
+::after {
     box-sizing: border-box;
 }
 
-/* Remove default margin */
 body,
 h1,
 h2,
@@ -15,40 +14,34 @@ figure,
 blockquote,
 dl,
 dd {
-    margin: 0;
+    margin: 0px;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
     list-style: none;
 }
 
-/* Set core root defaults */
 html:focus-within {
     scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
 body {
     min-height: 100vh;
-    text-rendering: optimizeSpeed;
+    text-rendering: optimizespeed;
     line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
 a:not([class]) {
     text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
 img,
 picture {
     max-width: 100%;
     display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
@@ -56,15 +49,14 @@ select {
     font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
         scroll-behavior: auto;
     }
 
     *,
-    *::before,
-    *::after {
+    ::before,
+    ::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
@@ -72,39 +64,34 @@ select {
     }
 }
 
-/*-----------------------------end reset--------------------------*/
-
-/*------------------- To work with rem more easy---------------------*/
-
 :root {
     font-size: 62.5%;
 }
-
-/*----------------------------------------------------------------*/
-
 
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: "Libre Franklin", sans-serif;
 }
 
 .main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 65px 0px 15px;
+    margin: 67px 0px 5px;
 }
 
-.main-container__logo {width: 50px;}
+.main-container__logo {
+    width: 70px;
+}
 
 .main-container__title {
     font-weight: 300;
-    color: hsl(0, 0%, 59%);
+    color: rgb(150, 150, 150);
     margin-top: 35px;
-    font-size: 2rem;
+    font-size: 2.3rem;
 }
 
 em {
@@ -113,64 +100,68 @@ em {
     font-weight: 700;
 }
 
-.main-container__dashboard {margin: 70px 79px 91px;padding: 0px 40px 0px;}
+.main-container__dashboard {
+    margin: 60px 0px;
+}
 
 form {
     display: flex;
     flex-direction: column;
     min-width: 345px;
     align-items: center;
-    gap: 3px;
     margin-top: 10px;
 }
 
-.form__label {
-
+.main-container__h2 {
     margin: 10px 0px 30px;
-
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .form__input,
 .form__button {
     border-radius: 25px;
-    padding: 10px;
-    border: 1px solid hsl(223, 100%, 88%);
+    padding: 13px;
+    border: 1px solid rgb(194, 211, 255);
     min-width: 75%;
 }
 
-.form__input {}
-
 .form__button {
-    background-color: hsl(223, 87%, 63%);
+    background-color: rgb(79, 125, 243);
     color: whitesmoke;
     font-weight: 600;
+    font-size: 1.2rem;
 }
 
 input:invalid {
-    border-color: hsl(354, 100%, 66%);
+    border-color: rgb(255, 82, 99);
 }
 
 input:focus:invalid {
     outline: none;
-    border-color: hsl(354, 100%, 66%);
+    border-color: rgb(255, 82, 99);
 }
 
 input:focus-visible {
-    border-color: hsl(223, 100%, 88%);
+    border-color: rgb(194, 211, 255);
     outline: none;
 }
 
 input::placeholder {
-    color: hsl(223, 100%, 88%);
+    color: rgb(194, 211, 255);
 }
 
-/* This is the style of our error messages */
+input::placeholder,
+.form__button {
+    font-size: 1.2rem;
+}
+
 .error {
-    font-size: 80%;
-    border-radius: 0 0 5px 5px;
-    color: hsl(341, 100%, 66%);
+    font-size: 1rem;
+    border-radius: 0px 0px 5px 5px;
+    color: rgb(255, 82, 137);
     box-sizing: border-box;
+    font-style: italic;
+    margin-bottom: 12px;
 }
 
 .error.active {
@@ -178,19 +169,18 @@ input::placeholder {
 }
 
 .fa-brands {
-    width: 44px;
-    color:hsl(223, 87%, 63%);
-    border: 1px solid hsl(223, 100%, 88%);
-    border-radius: 87px;
-    font-size: 19px;
-    margin: 8px;
+    width: 25px;
+    color: rgb(79, 125, 243);
+    border: 1px solid rgb(194, 211, 255);
+    border-radius: 100%;
+    font-size: 12px;
+    margin: 3px;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }
 
-.footer__copyright{
-    
-color: hsl(0, 0%, 59%);
+.footer__copyright {
+    color: rgb(150, 150, 150);
 }
 
 .attribution {
@@ -199,5 +189,43 @@ color: hsl(0, 0%, 59%);
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: rgb(62, 82, 163);
+}
+
+@media only screen and (min-width: 37.5em) {
+    .main-container__title {
+        font-size: 4rem;
+    }
+
+    .main-container__h2 {
+        font-size: 1.7rem;
+    }
+
+    .form {
+        flex-flow: row wrap;
+        min-width: 540px;
+        gap: 3px;
+    }
+
+    .form__input,
+    .form__button {
+        min-width: 35%;
+    }
+
+    .form__input {
+        min-width: 64%;
+    }
+
+    input::placeholder,
+    .form__button {
+        font-size: 1.3rem;
+    }
+
+    .error {
+        order: 3;
+    }
+
+    .main-container__dashboard {
+        max-width: 500px;
+    }
 }
