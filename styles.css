@@ -134,6 +134,7 @@ form {
     background-color: var(--blue);
     color: whitesmoke;
     font-weight: 600;
+    box-shadow: 0px 5px 7px 0 var(--pale-blue);
 }
 
 .form__button:hover {
@@ -162,7 +163,7 @@ input::placeholder,
 .error {
     font-size: 1.2rem;
     border-radius: 0px 0px 5px 5px;
-    color: rgb(255, 82, 137);
+    color: var(--light-red);
     box-sizing: border-box;
     font-style: italic;
     margin-bottom: 12px;
@@ -174,7 +175,7 @@ input::placeholder,
 
 .fa-brands {
     width: 25px;
-    color: rgb(79, 125, 243);
+    color: var(--blue);
     border: 1px solid rgb(194, 211, 255);
     border-radius: 100%;
     font-size: 12px;
@@ -184,7 +185,7 @@ input::placeholder,
 }
 
 .footer__copyright {
-    color: rgb(150, 150, 150);
+    color: var(--gray);
 }
 
 .attribution {
@@ -208,16 +209,15 @@ input::placeholder,
     .form {
         flex-flow: row wrap;
         min-width: 540px;
-        gap: 3px;
+        gap: 11px;
     }
 
-    .form__input,
     .form__button {
         min-width: 35%;
     }
 
     .form__input {
-        min-width: 64%;
+        min-width: 62%;
     }
 
     input::placeholder,
