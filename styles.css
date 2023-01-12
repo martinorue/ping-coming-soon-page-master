@@ -66,6 +66,11 @@ select {
 
 :root {
     font-size: 62.5%;
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
 }
 
 body {
@@ -89,14 +94,14 @@ body {
 
 .main-container__title {
     font-weight: 300;
-    color: rgb(150, 150, 150);
+    color: var(--gray);
     margin-top: 35px;
     font-size: 2.3rem;
 }
 
 em {
     font-style: normal;
-    color: hsl(209, 33%, 12%);
+    color: var(--very-dark-blue);
     font-weight: 700;
 }
 
@@ -121,28 +126,27 @@ form {
 .form__button {
     border-radius: 25px;
     padding: 13px;
-    border: 1px solid rgb(194, 211, 255);
+    border: 1px solid var(--pale-blue);
     min-width: 75%;
 }
 
 .form__button {
-    background-color: rgb(79, 125, 243);
+    background-color: var(--blue);
     color: whitesmoke;
     font-weight: 600;
-    font-size: 1.2rem;
 }
 
-.form__button:hover{
-    background-color: hsl(223, 100%, 73%);
+.form__button:hover {
+    background-color: var(--pale-blue);
 }
 
 input:focus:invalid {
     outline: none;
-    border-color: rgb(255, 82, 99);
+    border-color: var(--light-red);
 }
 
 input:focus-visible {
-    border-color: rgb(194, 211, 255);
+    border-color: var(--pale-blue);
     outline: none;
 }
 
